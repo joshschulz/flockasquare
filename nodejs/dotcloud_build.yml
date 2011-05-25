@@ -2,3 +2,4 @@ nodejs:
   requirements:
     - http
     - express
+    - node-foursquare
