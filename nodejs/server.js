@@ -1,12 +1,6 @@
-/*var http = require('http');
-
-http.createServer(function (req, res) {
-	res.writeHead(200, {'Content-Type': 'text/plain'});
-	res.end('Hellow World\n');
-}).listen(8080);
-*/
 var express = require('express');
 var foursquare = require('node-foursquare').Foursquare();
+
 var CLIENTID = 'ALFZEBG4YWG2O11JLN2UHOEO0YEH2RFNOK0GLNYXCNEUT1GR';
 var CLIENTSECRET = 'FZGAIYKGDQRRYUYCRQ3L5YI14EU1MGLZAEF34EY3REVPQEP5';
 var LOGINREDIRECT = 'http://nodejs.flockasquare.dotcloud.com/fin';
@@ -26,7 +20,7 @@ app.get('/callback', function(req, res){
 		code: code,
 		redirect_urk: LOGINREDIRECT,
 		client_id: CLIENTID,
-		client_secret: CLIENTSECRET,
+		client_secret: CLIENTSECRET
 	}, function (error, accessToken){
 			if(error){
 				res.send("An error was thrown: "+error.message);
