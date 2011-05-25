@@ -1,3 +1,4 @@
 nodejs:
-  requirementS:
+  requirements:
     - http
+    - express
