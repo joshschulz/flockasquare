@@ -15,6 +15,6 @@ app.get('/', function(req, res){
 
 app.get('/team/:name', function(req, res){
 	res.send('Team' + req.params.name);
-}
+});
 
 app.listen(8080);
