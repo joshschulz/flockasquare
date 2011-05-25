@@ -5,6 +5,7 @@ http.createServer(function (req, res) {
 	res.end('Hellow World\n');
 }).listen(8080);
 */
+require('express');
 
 var app = express.createServer();
 app.get('/', function(req, res){
