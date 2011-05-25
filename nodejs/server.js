@@ -7,7 +7,7 @@ var LOGINREDIRECT = 'http://nodejs.flockasquare.dotcloud.com/fin';
 
 var app = express.createServer();
 
-/* Foursquare login crap */
+/* Foursquare login crap 
 app.get('/login', function(req, res){
 	var url = Foursquare.getAuthClientRedirectUrl(CLIENTID, LOGINREDIRECT);
 	res.writeHead( 303, {"location": url});
@@ -45,5 +45,5 @@ app.get('/', function(req, res){
 app.get('/team/:name', function(req, res){
 	res.send('Hello Team: ' + req.params.name);
 });
-
+*/
 app.listen(8080);
