@@ -8,8 +8,13 @@ http.createServer(function (req, res) {
 var express = require('express');
 
 var app = express.createServer();
+
 app.get('/', function(req, res){
 	res.send('Hello new world');
 });
+
+app.get('/team/:name', function(req, res){
+	res.send('Team' + req.params.name);
+}
 
 app.listen(8080);
