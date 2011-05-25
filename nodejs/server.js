@@ -28,12 +28,13 @@ app.get('/callback', function(req, res){
 		client_id: CLIENTID,
 		client_secret: CLIENTSECRET,
 	}, function (error, accessToken){
-		if(error){
-			res.send("An error was thrown: "+error.message);
-		} else {
-			//save and do something
-			res.cookie('token', accessToken);
-			res.writeHead(303, {"location": LOGINREDIRECT);
+			if(error){
+				res.send("An error was thrown: "+error.message);
+			} else {
+				//save and do something
+				res.cookie('token', accessToken);
+				res.writeHead(303, {"location": LOGINREDIRECT);
+			}
 		}
 	});
 });
